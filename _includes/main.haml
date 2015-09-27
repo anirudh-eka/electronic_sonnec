@@ -2,7 +2,7 @@
   $(document).ready(function() { electronicSonnec.init(); });
 
 %div#static-computer-monitor.black-computer-screen-theme.l-full-window
-  %audio{"src" =>"audio/electronic_sonnec.ogg", "preload" => "auto"}
+  %audio{"src" =>"audio/electronic_sonnec.ogg", "preload" => "auto", "oncanplaythrough" => "console.log('can play through!')"}
     Your browser does not support the <code>audio</code> element.
 
   %div.black-computer-screen-theme.full-background.layer--top.transition-to-video.fade-out-partial
@@ -25,21 +25,21 @@
         %span.stanza-one.fade-in{"data-scene-step" => 3100}
           cultural reins
   %div.threeD-container.full-background.layer--middle.transitionTwo.rotate-away-left-and-fade
-    %p.stanza-one-repeat.glitch.slide-forward{"data-text" => "We pulsate to the current"}
+    %p.stanza-one-repeat.slide-forward
       We pulsate to the current
     %p.stanza-one-repeat.slide-forward
       Driving through our veins
-    %p.stanza-one-repeat.slide-forward.glitch{"data-text" => "Which acts as a deterrent"}
+    %p.stanza-one-repeat.slide-forward
       Which acts as a deterrent
     %p.stanza-one-repeat.slide-forward
       To your aged cultural reins
-    %p.stanza-two.slide-forward.glitch{"data-text" => "We raise our placards loudly"}
+    %p.stanza-two.slide-forward
       We raise our placards loudly
     %p.stanza-two.slide-forward-close
       With bullhorns crystal clear
-    %p.stanza-two.slide-forward-closer.glitch{"data-text" => "That crack the glass proucly"}
+    %p.stanza-two.slide-forward-closer
       That crack the glass proudly
-    %p.stanza-two.slide-forward-closest.glitch{"data-text" => "Of the ceiling you hold so dear"}
+    %p.stanza-two.slide-forward-closest
       Of the ceiling you hold so dear
 
   %ul.layer--middle.full-background.l-columns.transitionThree.fade-out
@@ -48,15 +48,44 @@
         %p.stanza-three-line-one.fade-in.glitch{"data-text" => scene[:word]}= scene[:word]
     %li.column
       - [{word: "No"}, {word: "matter"}, {word: "where"}, {word: "we"}, {word: "lay"}, {word: "our"}, word: "heads"].each do |scene|
-        %p.stanza-three-line-two.fade-in.glitch{"data-text" => scene[:word]}= scene[:word]
+        %p.stanza-three-line-two.fade-in= scene[:word]
     %li.column
       - [{word: "We'll"}, {word: "outlast"}, {word: "your"}, {word: "skin"}, {word: "cells"}, {word: "final"}, {word: "throws"}].each do |scene|
-        %p.stanza-three-line-three.fade-in.glitch{"data-text" => scene[:word]}= scene[:word]
+        %p.stanza-three-line-three.fade-in= scene[:word]
         
-  %div.layer--middle.full-background
+  %div.layer--middle.full-background.transitionFour.fade-out
     %div.title-container
       %h1.title.fade-in-and-scale-up-slow.glitch{"data-text" => "Resist"}
         Electronic Sonnec
+
+  %div.layer--middle.full-background
+    %p.stanza-one-final.fade-in.glitch{"data-scene-step" => 3300, "data-text" => "We pulsate to the current"}
+      We pulsate to the current
+    %p
+      %span.stanza-one-final.fade-in 
+        Driving through 
+      %span.stanza-one-final.fade-in.glitch{"data-scene-step" => 3100, "data-text" => "our veins"}
+        our veins
+    %p
+      %span.stanza-one-final.fade-in{"data-text" => "Which acts as"}
+        Which acts as
+      %span.stanza-one-final.fade-in{"data-scene-step" => 3100}
+        a deterrent
+    %p
+      %span.stanza-one-final.fade-in.glitch{"data-text" => "To your aged"}
+        To your aged
+      %span.stanza-one-final.fade-in{"data-scene-step" => 3100}
+        cultural reins
+
+    %div.l-right-aligned
+      %p.stanza-two-final.fade-in
+        We raise our placards loudly
+      %p.stanza-two-final.fade-in
+        With bullhorns crystal clear
+      %p.stanza-two-final.fade-in
+        That crack the glass proudly
+      %p.stanza-two-final.fade-in
+        Of the ceiling you hold so dear
 
   %video.electronic_sonnec_video.l-full-width-of-window.black-computer-screen-theme.layer--bottom.transition2.rotate-away-left-and-fade{"preload" => "auto", "muted" => true}
     %source{"src"=> "video/electronic_sonnec_video.mp4", "type" => "video/mp4"}

@@ -16,6 +16,9 @@ var electronicSonnec = {
 		var stanzaThreeLineThree = Transit.getScenes(".stanza-three-line-three")
 		var transitionThree = Transit.getScenes(".transitionThree")
 		var title = Transit.getScenes(".title")
+		var transitionFour = Transit.getScenes(".transitionFour")
+		var stanzaOneFinal = Transit.getScenes(".stanza-one-final")
+		var stanzaTwoFinal = Transit.getScenes(".stanza-two-final")
 
 	    audio.play();
 	    window.setTimeout(function(){stanzaOne.play(function(){
@@ -52,16 +55,33 @@ var electronicSonnec = {
 		    					stanzaThreeLineThree.play(function(){
 		    						window.setTimeout(function(){
 		    							transitionThree.play(function(){
-		    								title.play()	
+		    								title.play(function(){
+		    									window/setTimeout(function(){
+		    										transitionFour.play();
+		    									},6000);
+		    								});	
 		    							});
-		    						}, 12000);
+		    						}, 11800);
 		    					});
 		    				}, 11000);
 		    			});
-		    		}, 12500);
-		    	});}, 6500);
+		    		}, 11000);
+		    	});}, 4600);
 	    	}
 	    });
+
+
+	    $(transitionFour.last()).on(transitionEvent, function(e) {
+	    	if(e.target == transitionFour.last()) {
+	    		stanzaOneFinal.play();
+	    	}
+	    })
+
+		$(stanzaOneFinal.last()).on(transitionEvent, function(e) {
+	    	if(e.target == stanzaOneFinal.last()) {
+	    		stanzaTwoFinal.play();
+	    	}
+	    })	    
 	}
 }
 
