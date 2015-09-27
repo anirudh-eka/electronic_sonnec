@@ -17,8 +17,11 @@ var electronicSonnec = {
 		var transitionThree = Transit.getScenes(".transitionThree")
 		var title = Transit.getScenes(".title")
 		var transitionFour = Transit.getScenes(".transitionFour")
-		var stanzaOneFinal = Transit.getScenes(".stanza-one-final")
-		var stanzaTwoFinal = Transit.getScenes(".stanza-two-final")
+		var fullPoem = Transit.getScenes(".stanza-one-final")
+		fullPoem.addScenes(Transit.getScenes(".stanza-two-final"))
+		fullPoem.addScenes(Transit.getScenes(".stanza-three-final"))
+		fullPoem.addScenes(Transit.getScenes(".stanza-four-final"))
+		fullPoem.addScenes(Transit.getScenes(".stanza-five-final"))
 
 	    audio.play();
 	    window.setTimeout(function(){stanzaOne.play(function(){
@@ -27,17 +30,6 @@ var electronicSonnec = {
 	    		video.play();
 	    	})}, 3500);
 	    })}, 0);
-
-		var options = {
-		  "animate": true,
-		  "patternWidth": 58.63,
-		  "patternHeight": 242.35,
-		  "grainOpacity": 0.01,
-		  "grainDensity": 1.1,
-		  "grainWidth": 1,
-		  "grainHeight": 5.1
-		}
-	    grained('#static-computer-monitor', options)
 
 	    var transitionEvent = whichTransitionEvent();
 
@@ -66,22 +58,16 @@ var electronicSonnec = {
 		    				}, 11000);
 		    			});
 		    		}, 11000);
-		    	});}, 4600);
+		    	});}, 6000);
 	    	}
 	    });
 
 
 	    $(transitionFour.last()).on(transitionEvent, function(e) {
 	    	if(e.target == transitionFour.last()) {
-	    		stanzaOneFinal.play();
+	    		fullPoem.play();
 	    	}
 	    })
-
-		$(stanzaOneFinal.last()).on(transitionEvent, function(e) {
-	    	if(e.target == stanzaOneFinal.last()) {
-	    		stanzaTwoFinal.play();
-	    	}
-	    })	    
 	}
 }
 
