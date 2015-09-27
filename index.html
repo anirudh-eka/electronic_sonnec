@@ -30,7 +30,7 @@
   $(document).ready(function() { electronicSonnec.init(); });
 </script>
 <div class='black-computer-screen-theme l-full-window' id='static-computer-monitor'>
-  <audio preload='auto' src='audio/electronic_sonnec.ogg'>
+  <audio oncanplaythrough="console.log('can play through!')" preload='auto' src='audio/electronic_sonnec.ogg'>
     Your browser does not support the <code>audio</code> element.
   </audio>
   <div class='black-computer-screen-theme full-background layer--top transition-to-video fade-out-partial'>
@@ -65,28 +65,28 @@
     </div>
   </div>
   <div class='threeD-container full-background layer--middle transitionTwo rotate-away-left-and-fade'>
-    <p class='stanza-one-repeat glitch slide-forward' data-text='We pulsate to the current'>
+    <p class='stanza-one-repeat slide-forward'>
       We pulsate to the current
     </p>
     <p class='stanza-one-repeat slide-forward'>
       Driving through our veins
     </p>
-    <p class='stanza-one-repeat slide-forward glitch' data-text='Which acts as a deterrent'>
+    <p class='stanza-one-repeat slide-forward'>
       Which acts as a deterrent
     </p>
     <p class='stanza-one-repeat slide-forward'>
       To your aged cultural reins
     </p>
-    <p class='stanza-two slide-forward glitch' data-text='We raise our placards loudly'>
+    <p class='stanza-two slide-forward'>
       We raise our placards loudly
     </p>
     <p class='stanza-two slide-forward-close'>
       With bullhorns crystal clear
     </p>
-    <p class='stanza-two slide-forward-closer glitch' data-text='That crack the glass proucly'>
+    <p class='stanza-two slide-forward-closer'>
       That crack the glass proudly
     </p>
-    <p class='stanza-two slide-forward-closest glitch' data-text='Of the ceiling you hold so dear'>
+    <p class='stanza-two slide-forward-closest'>
       Of the ceiling you hold so dear
     </p>
   </div>
@@ -100,29 +100,72 @@
       <p class='stanza-three-line-one fade-in glitch' data-text='echoes'>echoes</p>
     </li>
     <li class='column'>
-      <p class='stanza-three-line-two fade-in glitch' data-text='No'>No</p>
-      <p class='stanza-three-line-two fade-in glitch' data-text='matter'>matter</p>
-      <p class='stanza-three-line-two fade-in glitch' data-text='where'>where</p>
-      <p class='stanza-three-line-two fade-in glitch' data-text='we'>we</p>
-      <p class='stanza-three-line-two fade-in glitch' data-text='lay'>lay</p>
-      <p class='stanza-three-line-two fade-in glitch' data-text='our'>our</p>
-      <p class='stanza-three-line-two fade-in glitch' data-text='heads'>heads</p>
+      <p class='stanza-three-line-two fade-in'>No</p>
+      <p class='stanza-three-line-two fade-in'>matter</p>
+      <p class='stanza-three-line-two fade-in'>where</p>
+      <p class='stanza-three-line-two fade-in'>we</p>
+      <p class='stanza-three-line-two fade-in'>lay</p>
+      <p class='stanza-three-line-two fade-in'>our</p>
+      <p class='stanza-three-line-two fade-in'>heads</p>
     </li>
     <li class='column'>
-      <p class='stanza-three-line-three fade-in glitch' data-text="We'll">We'll</p>
-      <p class='stanza-three-line-three fade-in glitch' data-text='outlast'>outlast</p>
-      <p class='stanza-three-line-three fade-in glitch' data-text='your'>your</p>
-      <p class='stanza-three-line-three fade-in glitch' data-text='skin'>skin</p>
-      <p class='stanza-three-line-three fade-in glitch' data-text='cells'>cells</p>
-      <p class='stanza-three-line-three fade-in glitch' data-text='final'>final</p>
-      <p class='stanza-three-line-three fade-in glitch' data-text='throws'>throws</p>
+      <p class='stanza-three-line-three fade-in'>We'll</p>
+      <p class='stanza-three-line-three fade-in'>outlast</p>
+      <p class='stanza-three-line-three fade-in'>your</p>
+      <p class='stanza-three-line-three fade-in'>skin</p>
+      <p class='stanza-three-line-three fade-in'>cells</p>
+      <p class='stanza-three-line-three fade-in'>final</p>
+      <p class='stanza-three-line-three fade-in'>throws</p>
     </li>
   </ul>
-  <div class='layer--middle full-background'>
+  <div class='layer--middle full-background transitionFour fade-out'>
     <div class='title-container'>
       <h1 class='title fade-in-and-scale-up-slow glitch' data-text='Resist'>
         Electronic Sonnec
       </h1>
+    </div>
+  </div>
+  <div class='layer--middle full-background'>
+    <p class='stanza-one-final fade-in glitch' data-scene-step='3300' data-text='We pulsate to the current'>
+      We pulsate to the current
+    </p>
+    <p>
+      <span class='stanza-one-final fade-in'>
+        Driving through
+      </span>
+      <span class='stanza-one-final fade-in glitch' data-scene-step='3100' data-text='our veins'>
+        our veins
+      </span>
+    </p>
+    <p>
+      <span class='stanza-one-final fade-in' data-text='Which acts as'>
+        Which acts as
+      </span>
+      <span class='stanza-one-final fade-in' data-scene-step='3100'>
+        a deterrent
+      </span>
+    </p>
+    <p>
+      <span class='stanza-one-final fade-in glitch' data-text='To your aged'>
+        To your aged
+      </span>
+      <span class='stanza-one-final fade-in' data-scene-step='3100'>
+        cultural reins
+      </span>
+    </p>
+    <div class='l-right-aligned'>
+      <p class='stanza-two-final fade-in'>
+        We raise our placards loudly
+      </p>
+      <p class='stanza-two-final fade-in'>
+        With bullhorns crystal clear
+      </p>
+      <p class='stanza-two-final fade-in'>
+        That crack the glass proudly
+      </p>
+      <p class='stanza-two-final fade-in'>
+        Of the ceiling you hold so dear
+      </p>
     </div>
   </div>
   <video class='electronic_sonnec_video l-full-width-of-window black-computer-screen-theme layer--bottom transition2 rotate-away-left-and-fade' muted preload='auto'>
