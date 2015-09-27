@@ -29,11 +29,11 @@
     <script type='text/javascript'>
   $(document).ready(function() { electronicSonnec.init(); });
 </script>
-<div class='black-computer-screen-theme l-full-window' id='static-computer-monitor'>
+<div class='black-computer-screen-theme' id='static-computer-monitor'>
   <audio oncanplaythrough="console.log('can play through!')" preload='auto' src='audio/electronic_sonnec.ogg'>
     Your browser does not support the <code>audio</code> element.
   </audio>
-  <div class='black-computer-screen-theme full-background layer--top transition-to-video fade-out-partial'>
+  <div class='black-computer-screen-theme full-width layer--top transition-to-video fade-out'>
     <div class='l-centered-content transition-to-video fade-out'>
       <p class='stanza-one fade-in glitch' data-scene-step='3300' data-text='We pulsate to the current'>
         We pulsate to the current
@@ -64,7 +64,7 @@
       </p>
     </div>
   </div>
-  <div class='threeD-container full-background layer--middle transitionTwo rotate-away-left-and-fade'>
+  <div class='threeD-container full-width layer--middle transitionTwo rotate-away-left-and-fade'>
     <p class='stanza-one-repeat slide-forward'>
       We pulsate to the current
     </p>
@@ -90,7 +90,7 @@
       Of the ceiling you hold so dear
     </p>
   </div>
-  <ul class='layer--middle full-background l-columns transitionThree fade-out'>
+  <ul class='layer--middle full-width l-columns transitionThree fade-out'>
     <li class='column'>
       <p class='stanza-three-line-one fade-in glitch' data-text='We'>We</p>
       <p class='stanza-three-line-one fade-in glitch' data-text="won't">won't</p>
@@ -118,14 +118,12 @@
       <p class='stanza-three-line-three fade-in'>throws</p>
     </li>
   </ul>
-  <div class='layer--middle full-background transitionFour fade-out'>
-    <div class='title-container'>
-      <h1 class='title fade-in-and-scale-up-slow glitch' data-text='Resist'>
-        Electronic Sonnec
-      </h1>
-    </div>
+  <div class='layer--top title-container transitionFour fade-out'>
+    <h1 class='title fade-in-and-scale-up-slow glitch' data-text='Resist'>
+      Electronic Sonnec
+    </h1>
   </div>
-  <div class='layer--middle full-background'>
+  <div class='layer--bottom full-width black-computer-screen-theme'>
     <p class='stanza-one-final fade-in glitch' data-scene-step='3300' data-text='We pulsate to the current'>
       We pulsate to the current
     </p>
@@ -154,21 +152,63 @@
       </span>
     </p>
     <div class='l-right-aligned'>
-      <p class='stanza-two-final fade-in'>
+      <p class='stanza-two-final fade-in' data-scene-step='3100'>
         We raise our placards loudly
       </p>
-      <p class='stanza-two-final fade-in'>
+      <p class='stanza-two-final fade-in' data-scene-step='3100'>
         With bullhorns crystal clear
       </p>
-      <p class='stanza-two-final fade-in'>
+      <p class='stanza-two-final fade-in' data-scene-step='3100'>
         That crack the glass proudly
       </p>
-      <p class='stanza-two-final fade-in'>
+      <p class='stanza-two-final fade-in' data-scene-step='3100'>
         Of the ceiling you hold so dear
       </p>
     </div>
+    <div>
+      <p class='stanza-three-final fade-in' data-scene-step='3100'>
+        We won't stop the marching echoes
+      </p>
+      <p class='stanza-three-final fade-in' data-scene-step='3100'>
+        No matter where we lay our head
+      </p>
+      <p class='stanza-three-final fade-in' data-scene-step='3100'>
+        We'll outlast your skin cells final throws
+      </p>
+      <p class='stanza-three-final fade-in' data-scene-step='3100'>
+        And leave you in the dust dying til' dead
+      </p>
+    </div>
+    <div class='l-right-aligned'>
+      <p class='stanza-four-final fade-in' data-scene-step='3100'>
+        We are the owners of the future
+      </p>
+      <p class='stanza-four-final fade-in' data-scene-step='3100'>
+        The masters of tomorrow
+      </p>
+    </div>
+    <div>
+      <p class='stanza-five-final fade-in' data-scene-step='3100'>
+        And we have no remorse
+      </p>
+      <p class='stanza-five-final fade-in' data-scene-step='3100'>
+        For your present, In
+      </p>
+      <p class='stanza-five-final fade-in' data-scene-step='3100'>
+        Your final days
+      </p>
+      <p class='stanza-five-final fade-in' data-scene-step='3100'>
+        We'll have
+      </p>
+      <p class='stanza-five-final fade-in' data-scene-step='3100'>
+        No
+      </p>
+      <p class='stanza-five-final fade-in' data-scene-step='3100'>
+        Sorrow
+      </p>
+    </div>
   </div>
-  <video class='electronic_sonnec_video l-full-width-of-window black-computer-screen-theme layer--bottom transition2 rotate-away-left-and-fade' muted preload='auto'>
+  <video class='electronic_sonnec_video l-full-width-of-window black-computer-screen-theme layer--bottom transitionTwo rotate-away-left-and-fade' muted preload='auto'>
     <source src='video/electronic_sonnec_video.mp4' type='video/mp4'>
     <source src='video/electronic_sonnec_video.ogg' type='video/ogg'>
     I'm sorry; your browser doesn't support HTML5 video in WebM with VP8 or MP4 with H.264.
