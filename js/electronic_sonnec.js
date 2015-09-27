@@ -44,7 +44,7 @@ var electronicSonnec = {
 
 	    $(transitionTwo.last()).on(transitionEvent, function(e){
 	    	if(e.target == transitionTwo.last()) {
-	    		$("video").remove();
+	    		$("video").empty();
 		    	window.setTimeout(function(){stanzaThreeLineOne.play(function(){
 		    		window.setTimeout(function(){
 		    			stanzaThreeLineTwo.play(function(){
