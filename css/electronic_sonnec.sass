@@ -1,0 +1,91 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+.electronic_sonnec_video
+  opacity: 0.5
+
+.layer--top
+  z-index: 3
+
+.layer--middle
+  z-index: 2
+
+.layer--bottom
+  z-index: 1
+
+.full-background
+  height: 100%
+  width: 100%
+  position: absolute
+
+.threeD-container
+  perspective: 3px
+
+
+.stanza-two, .stanza-one-repeat
+  color: white
+  font-family: Courier
+
+.stanza-two
+  text-align: right
+
+.slide-forward, .slide-forward-close, .slide-forward-closer, .slide-forward-closest
+  transform: translateZ(-400px) rotateZ(-16deg)
+  display: block
+  transition-property: transform
+  transition-duration: 10s
+  transition-timing-function: ease-out
+
+.slide-forward-end
+  transform: translateZ(-1.5px) rotateZ(-16.5deg)
+
+.slide-forward-close-end
+  transform: translateZ(-1px) rotateZ(-16.5deg)
+
+.slide-forward-closer-end
+  transform: translateZ(-0.5px) rotateZ(-16.5deg)
+
+.slide-forward-closest-end
+  transform: translateZ(0px) rotateZ(-16.5deg)
+
+.rotate-away-left
+  transition: transform 5s
+  transition-delay: 5s
+  transition-timing-function: ease-out
+  transform-origin: left
+  transform: rotateY(0deg)
+
+.rotate-away-left-end
+  transform: rotateY(-90deg)
+
+.rotate-away-left-and-fade
+  transition: transform 10s, opacity 6s
+  transition-delay: 5s
+  transition-timing-function: ease-out
+  transform-origin: left
+  transform: rotateY(0deg)
+
+.rotate-away-left-and-fade-end
+  opacity: 0
+  transform: rotateY(-90deg)
+
+.fade-in-and-scale-up-slow
+  opacity: 0
+  transform: opacity 2s, scale(1) 5s
+  transition-property: transform
+  transition-timing-function: ease-out
+
+.fade-in-and-scale-up-slow-end
+  transform: scale(3)
+  opacity: 1
+
+.title-container
+  position: absolute
+  left: 36%
+  top: 44%
+
+.title
+  display: inline-block
+
+@import fx, theme, layouts, base_custom

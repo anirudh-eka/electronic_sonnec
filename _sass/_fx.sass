@@ -1,0 +1,95 @@
+.fade-out
+  opacity: 1
+  transition: opacity 1s linear
+
+.fade-out-end
+  opacity: 0
+
+.fade-out-partial
+  opacity: 1
+  transition: opacity 1s linear
+
+.fade-out-partial-end
+  opacity: 0.2
+
+.fade-in
+  opacity: 0
+  transition: opacity .1s ease-in-out
+
+.fade-in-end
+  opacity: 1
+
+.break-away-right
+  letter-spacing: 0em
+  transition-property: letter-spacing, padding-left
+  transition-delay: 0s
+  transition-duration: 1s
+  transition-timing-function: ease
+
+.break-away-right-end
+  letter-spacing: 0.1em
+  padding-left: 0.1em
+
+.break-away-right:hover
+  letter-spacing: 0em
+
+.slide-from-right, .slide-from-right:hover
+  padding-left: 0.2em
+  transition-property: letter-spacing, padding-left
+  transition-delay: 0s
+  transition-duration: 1s
+  transition-timing-function: ease  
+
+.slide-from-right-end
+  padding-left: 0em
+
+.slide-right
+  transition-property: transform
+  transition-duration: 5s
+  transition-timing-function: ease  
+  display: inline-block
+
+.slide-right-end, .slide-right:hover
+  transform: translateX(10vw)
+
+.glitch
+  position: relative
+
+@keyframes noise-anim
+  $steps: 20
+  @for $i from 0 through $steps
+    #{percentage($i*(1/$steps))}
+      clip: rect(random(100)+px,9999px,random(100)+px,0)
+    
+  
+
+.glitch:after
+  content: attr(data-text)
+  position: absolute
+  left: 2px
+  text-shadow: -1px 0 red
+  top: 0
+  color: white
+  background: black
+  overflow: hidden
+  clip: rect(0,900px,0,0) 
+  animation: noise-anim 2s infinite linear alternate-reverse
+
+@keyframes noise-anim-2
+  $steps:20
+  @for $i from 0 through $steps
+    #{percentage($i*(1/$steps))}
+      clip: rect(random(100)+px,9999px,random(100)+px,0)
+    
+
+.glitch:before
+  content: attr(data-text)
+  position: absolute
+  left: -2px
+  text-shadow: 1px 0 blue 
+  top: 0
+  color: white
+  background: black
+  overflow: hidden
+  clip: rect(0,900px,0,0) 
+  animation: noise-anim-2 3s infinite linear alternate-reverse
