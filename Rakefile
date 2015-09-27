@@ -30,6 +30,6 @@ task :commit, [:message] do |t, args|
   status = system("git commit -m \"#{message_with_time}\"")
   puts status ? "Success" : "Failed"
   puts "\n## Pushing commits to remote"
-  status = system("git push origin source")
+  status = system("git push origin gh-pages-source")
   puts status ? "Success" : "Failed"
 end
